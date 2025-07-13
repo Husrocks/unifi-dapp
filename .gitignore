@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+frontend/node_modules/
+contracts/node_modules/
+
+# Build and cache
+.cache/
+frontend/.cache/
+contracts/.cache/
+dist/
+build/
+
+# Environment files
+.env
+contracts/.env
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/ 

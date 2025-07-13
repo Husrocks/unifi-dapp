@@ -1,0 +1,23 @@
+{
+  "name": "unifi-defi",
+  "version": "1.0.0",
+  "description": "Decentralized Finance Platform for Student Ecosystem",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\" \"npm run dev:hardhat\"",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:hardhat": "cd contracts && npm run node",
+    "build": "cd frontend && npm run build",
+    "test": "cd contracts && npm test",
+    "compile": "cd contracts && npm run compile",
+    "deploy": "cd contracts && npm run deploy",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../contracts && npm install"
+  },
+  "keywords": ["defi", "blockchain", "students", "ethereum", "smart-contracts"],
+  "author": "UniFi Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "UniFi DeFi Platform Frontend",
   "private": true,
+  "homepage": "https://Husrocks.github.io/unifi-dapp",
   "dependencies": {
     "@ethersproject/providers": "^5.8.0",
     "@headlessui/react": "^1.7.15",
@@ -35,7 +36,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +60,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7"
+    "@types/react-dom": "^18.2.7",
+    "gh-pages": "^6.3.0"
   }
 }

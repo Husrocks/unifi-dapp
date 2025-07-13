@@ -44,7 +44,7 @@ function App() {
       <Web3ReactProvider getLibrary={getLibrary}>
         <WalletProvider>
           <ContractProvider>
-            <Router>
+            <Router basename="/unifi-dapp">
               <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900">
                 <Toaster
                   position="top-right"

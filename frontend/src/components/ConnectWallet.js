@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useWallet } from '../context/WalletContext';
 import { WalletIcon, ShieldCheckIcon, AcademicCapIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import WalletButton from './WalletButton';
@@ -69,20 +69,20 @@ const ConnectWallet = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900">
       {/* Top Navbar only for homepage */}
       <nav className="w-full bg-dark-900 shadow-lg shadow-dark-900/10 border-b border-dark-700 px-6 py-3 flex items-center justify-between z-50 fixed top-0 left-0 right-0 transition-all duration-300">
-        <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.location.href = '/'}>
+        <Link to="/" className="flex items-center space-x-3 cursor-pointer">
           <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center shadow-md">
             <AcademicCapIcon className="w-6 h-6 text-white" />
           </div>
           <span className="text-2xl font-extrabold tracking-tight text-white drop-shadow-sm select-none" style={{ letterSpacing: '-0.02em' }}>UniFi</span>
-        </div>
+        </Link>
         <div className="hidden md:flex items-center space-x-8">
-          <button onClick={() => window.location.href='/dashboard'} className="nav-link">Dashboard</button>
-          <button onClick={() => window.location.href='/dashboard/expense-pools'} className="nav-link">Expense Pools</button>
-          <button onClick={() => window.location.href='/dashboard/lending'} className="nav-link">Lending</button>
-          <button onClick={() => window.location.href='/dashboard/remittances'} className="nav-link">Remittances</button>
-          <button onClick={() => window.location.href='/dashboard/scholarships'} className="nav-link">Scholarships</button>
-          <button onClick={() => window.location.href='/dashboard/credit-score'} className="nav-link">Credit Score</button>
-          <button onClick={() => window.location.href='/dashboard/identity'} className="nav-link">Identity</button>
+          <Link to="/dashboard" className="nav-link">Dashboard</Link>
+          <Link to="/dashboard/expense-pools" className="nav-link">Expense Pools</Link>
+          <Link to="/dashboard/lending" className="nav-link">Lending</Link>
+          <Link to="/dashboard/remittances" className="nav-link">Remittances</Link>
+          <Link to="/dashboard/scholarships" className="nav-link">Scholarships</Link>
+          <Link to="/dashboard/credit-score" className="nav-link">Credit Score</Link>
+          <Link to="/dashboard/identity" className="nav-link">Identity</Link>
         </div>
       </nav>
       <div className="min-h-screen flex items-center justify-center p-4 pt-24">
